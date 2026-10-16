@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\events;
+use App\Models\tickets;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -21,7 +22,7 @@ class EventsFactory extends Factory
             'name' => fake()->name(),
             'time' => now(),
             'address' => fake()->address(),
-            
+            //'tickets_id' => tickets::inRandomOrder()->first()->id ?? tickets::factory(),
         ];
     }
 }

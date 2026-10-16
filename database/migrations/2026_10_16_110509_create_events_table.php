@@ -18,6 +18,9 @@ return new class extends Migration
             $table->string('address');
             $table->timestamps();
             $table->foreignId('tickets_id')->constrained();
+            //$table->foreignId('traders_id')->constrained();
+            
+            
         });
     }
 

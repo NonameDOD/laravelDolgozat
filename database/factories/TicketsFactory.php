@@ -2,7 +2,9 @@
 
 namespace Database\Factories;
 
+use App\Models\events;
 use App\Models\tickets;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,7 +20,9 @@ class TicketsFactory extends Factory
     public function definition(): array
     {
         return [
-            'status' => fake()->name(),
+            'status' => fake()->word(),
+            'events_id' => events::inRandomOrder()->first()->id ?? events::factory(),
+            'user_id' => User::inRandomOrder()->first()->id ?? User::factory()
         ];
     }
 }

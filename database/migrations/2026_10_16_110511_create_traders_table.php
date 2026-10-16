@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string('name');
             $table->string('description');
             $table->string('country');
-            $table->timestamps();
             $table->foreignId('events_id')->constrained();
+            $table->timestamps();
         });
     }
 

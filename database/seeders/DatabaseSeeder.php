@@ -3,8 +3,8 @@
 namespace Database\Seeders;
 
 use App\Models\User;
-use App\Models\tickets;
-use App\Models\events;
+use App\Models\traders;
+
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use PHPUnit\Framework\Attributes\Ticket;
@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         User::factory(10)->create();
-        events::factory(10)->create();
+        traders::factory(10)->create();
 
         User::factory()->create([
             'name' => 'Test User',
